@@ -1,10 +1,17 @@
 {
 	"name": "web",
+	"homepage": "https://vitaliksep.github.io/demo-react",
 	"private": true,
 	"type": "module",
 	"scripts": {
 		"dev": "react-router dev",
 		"typecheck": "react-router typegen && tsc --noEmit"
+	},
+	"scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
 	},
 	"dependencies": {
 		"@auth/core": "^0.37.2",
